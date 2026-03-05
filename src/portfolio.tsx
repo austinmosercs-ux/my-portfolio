@@ -43,7 +43,7 @@ const GLOBAL_STYLES = `
 
   @keyframes glowPulse {
     0%, 100% { box-shadow: 0 0 24px rgba(6,182,212,0.3), 0 0 60px rgba(6,182,212,0.08); }
-    50%       { box-shadow: 0 0 48px rgba(6,182,212,0.55), 0 0 100px rgba(168,85,247,0.18); }
+    50%       { box-shadow: 0 0 48px rgba(6,182,212,0.55), 0 0 100px rgba(16,185,129,0.18); }
   }
 
   @keyframes gradientFlow {
@@ -65,7 +65,7 @@ const theme = createTheme({
     mode: 'dark',
     background: { default: '#060810', paper: '#0a0e1a' },
     primary: { main: '#06b6d4' },
-    secondary: { main: '#a855f7' },
+    secondary: { main: '#10b981' },
     text: { primary: '#f1f5f9', secondary: '#64748b' },
   },
   typography: {
@@ -291,7 +291,7 @@ export const Portfolio: React.FC = () => {
               fontWeight: 800,
               fontSize: '1.1rem',
               letterSpacing: '-0.02em',
-              background: 'linear-gradient(90deg, #06b6d4, #a855f7)',
+              background: 'linear-gradient(90deg, #06b6d4, #10b981)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
             }}
@@ -401,7 +401,7 @@ export const Portfolio: React.FC = () => {
           {/* Ambient orbs */}
           <Box sx={{
             position: 'absolute', width: 500, height: 500, borderRadius: '50%',
-            background: 'radial-gradient(circle, rgba(168,85,247,0.07) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(16,185,129,0.07) 0%, transparent 70%)',
             top: '5%', right: '-10%', pointerEvents: 'none',
           }} />
           <Box sx={{
@@ -476,7 +476,7 @@ export const Portfolio: React.FC = () => {
               <Box
                 component="span"
                 sx={{
-                  background: 'linear-gradient(90deg, #06b6d4 0%, #a855f7 40%, #06b6d4 100%)',
+                  background: 'linear-gradient(90deg, #06b6d4 0%, #10b981 40%, #06b6d4 100%)',
                   backgroundSize: '200% auto',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
@@ -523,12 +523,12 @@ export const Portfolio: React.FC = () => {
                   px: 3.5,
                   py: 1.25,
                   fontSize: '0.9rem',
-                  borderColor: 'rgba(168,85,247,0.4)',
-                  color: '#c084fc',
+                  borderColor: 'rgba(16,185,129,0.4)',
+                  color: '#34d399',
                   '&:hover': {
-                    borderColor: '#a855f7',
-                    color: '#a855f7',
-                    background: 'rgba(168,85,247,0.06)',
+                    borderColor: '#10b981',
+                    color: '#10b981',
+                    background: 'rgba(16,185,129,0.06)',
                   },
                 }}
               >
@@ -616,9 +616,9 @@ export const Portfolio: React.FC = () => {
                 },
                 {
                   category: 'Frameworks & Libraries',
-                  color: '#a855f7',
-                  bg: 'rgba(168,85,247,0.06)',
-                  border: 'rgba(168,85,247,0.3)',
+                  color: '#10b981',
+                  bg: 'rgba(16,185,129,0.06)',
+                  border: 'rgba(16,185,129,0.3)',
                   skills: ['React', 'Jetpack Compose', 'Node.js', 'SwiftUI'],
                 },
                 {
@@ -711,9 +711,9 @@ export const Portfolio: React.FC = () => {
                             size="small"
                             variant="outlined"
                             sx={{
-                              borderColor: 'rgba(168,85,247,0.3)',
-                              color: '#c084fc',
-                              background: 'rgba(168,85,247,0.06)',
+                              borderColor: 'rgba(16,185,129,0.3)',
+                              color: '#34d399',
+                              background: 'rgba(16,185,129,0.06)',
                               fontSize: '0.66rem',
                             }}
                           />
@@ -961,7 +961,7 @@ export const Portfolio: React.FC = () => {
                   <Stack direction="row" spacing={0.75} flexWrap="wrap" sx={{ mb: 2.5, gap: '6px' }}>
                     {['Mobile Development', 'Web Development'].map((cert) => (
                       <Chip key={cert} label={cert} size="small" variant="outlined"
-                        sx={{ borderColor: 'rgba(168,85,247,0.3)', color: '#c084fc', background: 'rgba(168,85,247,0.06)', fontSize: '0.68rem' }}
+                        sx={{ borderColor: 'rgba(16,185,129,0.3)', color: '#34d399', background: 'rgba(16,185,129,0.06)', fontSize: '0.68rem' }}
                       />
                     ))}
                   </Stack>
@@ -1092,7 +1092,7 @@ export const Portfolio: React.FC = () => {
                 fontFamily: '"Syne", sans-serif',
                 fontWeight: 800,
                 fontSize: '1rem',
-                background: 'linear-gradient(90deg, #06b6d4, #a855f7)',
+                background: 'linear-gradient(90deg, #06b6d4, #10b981)',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
               }}
