@@ -65,7 +65,7 @@ const theme = createTheme({
     mode: 'dark',
     background: { default: '#060810', paper: '#0a0e1a' },
     primary: { main: '#06b6d4' },
-    secondary: { main: '#10b981' },
+    secondary: { main: '#0ea5e9' },
     text: { primary: '#f1f5f9', secondary: '#64748b' },
   },
   typography: {
@@ -420,7 +420,7 @@ export const Portfolio: React.FC = () => {
                   borderRadius: '50%',
                   mx: 'auto',
                   p: '3px',
-                  background: 'linear-gradient(135deg, #06b6d4, #a855f7)',
+                  background: 'linear-gradient(135deg, #06b6d4, #0ea5e9)',
                   animation: 'glowPulse 4s ease-in-out infinite',
                 }}
               >
@@ -476,7 +476,7 @@ export const Portfolio: React.FC = () => {
               <Box
                 component="span"
                 sx={{
-                  background: 'linear-gradient(90deg, #06b6d4 0%, #10b981 40%, #06b6d4 100%)',
+                  background: 'linear-gradient(90deg, #06b6d4 0%, #0ea5e9 40%, #06b6d4 100%)',
                   backgroundSize: '200% auto',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
@@ -524,10 +524,10 @@ export const Portfolio: React.FC = () => {
                   py: 1.25,
                   fontSize: '0.9rem',
                   borderColor: 'rgba(16,185,129,0.4)',
-                  color: '#34d399',
+                  color: '#38bdf8',
                   '&:hover': {
-                    borderColor: '#10b981',
-                    color: '#10b981',
+                    borderColor: '#0ea5e9',
+                    color: '#0ea5e9',
                     background: 'rgba(16,185,129,0.06)',
                   },
                 }}
@@ -616,9 +616,9 @@ export const Portfolio: React.FC = () => {
                 },
                 {
                   category: 'Frameworks & Libraries',
-                  color: '#10b981',
-                  bg: 'rgba(16,185,129,0.06)',
-                  border: 'rgba(16,185,129,0.3)',
+                  color: '#0ea5e9',
+                  bg: 'rgba(14,165,233,0.06)',
+                  border: 'rgba(14,165,233,0.3)',
                   skills: ['React', 'Jetpack Compose', 'Node.js', 'SwiftUI'],
                 },
                 {
@@ -711,9 +711,9 @@ export const Portfolio: React.FC = () => {
                             size="small"
                             variant="outlined"
                             sx={{
-                              borderColor: 'rgba(16,185,129,0.3)',
-                              color: '#34d399',
-                              background: 'rgba(16,185,129,0.06)',
+                              borderColor: 'rgba(14,165,233,0.3)',
+                              color: '#38bdf8',
+                              background: 'rgba(14,165,233,0.06)',
                               fontSize: '0.66rem',
                             }}
                           />
@@ -847,62 +847,33 @@ export const Portfolio: React.FC = () => {
               Work History
             </Typography>
 
-            {/* Timeline */}
-            <Box sx={{ position: 'relative' }}>
-              <Box
-                sx={{
-                  position: 'absolute',
-                  left: { xs: 16, md: 20 },
-                  top: 24,
-                  bottom: 24,
-                  width: 1,
-                  background: 'linear-gradient(to bottom, rgba(6,182,212,0.45), rgba(6,182,212,0.04))',
-                }}
-              />
-              <Stack spacing={4}>
-                {experience.map((exp, index) => (
-                  <Box key={`${exp.company}-${index}`} sx={{ pl: { xs: 6, md: 8 }, position: 'relative' }}>
-                    {/* Dot */}
-                    <Box
-                      sx={{
-                        position: 'absolute',
-                        left: { xs: 10, md: 14 },
-                        top: 20,
-                        width: 12,
-                        height: 12,
-                        borderRadius: '50%',
-                        background: '#06b6d4',
-                        border: '2px solid #060810',
-                        boxShadow: '0 0 10px rgba(6,182,212,0.6)',
-                      }}
-                    />
-                    <Card sx={glassCard}>
-                      <CardContent sx={{ p: 3 }}>
-                        <Stack
-                          direction={{ xs: 'column', sm: 'row' }}
-                          justifyContent="space-between"
-                          alignItems={{ xs: 'flex-start', sm: 'center' }}
-                          sx={{ mb: 1 }}
-                        >
-                          <Typography variant="h6" sx={{ color: '#06b6d4', fontSize: '1rem' }}>
-                            {exp.position}
-                          </Typography>
-                          <Typography sx={{ fontSize: '0.78rem', color: '#64748b', fontWeight: 500, mt: { xs: 0.25, sm: 0 } }}>
-                            {exp.duration}
-                          </Typography>
-                        </Stack>
-                        <Typography variant="body2" sx={{ fontWeight: 600, color: '#94a3b8', fontSize: '0.85rem', mb: 1.5 }}>
-                          {exp.company}
-                        </Typography>
-                        <Typography variant="body2" sx={{ color: 'text.secondary', lineHeight: 1.75 }}>
-                          {exp.description}
-                        </Typography>
-                      </CardContent>
-                    </Card>
-                  </Box>
-                ))}
-              </Stack>
-            </Box>
+            <Stack spacing={3}>
+              {experience.map((exp, index) => (
+                <Card key={`${exp.company}-${index}`} sx={glassCard}>
+                  <CardContent sx={{ p: 3 }}>
+                    <Stack
+                      direction={{ xs: 'column', sm: 'row' }}
+                      justifyContent="space-between"
+                      alignItems={{ xs: 'flex-start', sm: 'center' }}
+                      sx={{ mb: 1 }}
+                    >
+                      <Typography variant="h6" sx={{ color: '#06b6d4', fontSize: '1rem' }}>
+                        {exp.position}
+                      </Typography>
+                      <Typography sx={{ fontSize: '0.78rem', color: '#64748b', fontWeight: 500, mt: { xs: 0.25, sm: 0 } }}>
+                        {exp.duration}
+                      </Typography>
+                    </Stack>
+                    <Typography variant="body2" sx={{ fontWeight: 600, color: '#94a3b8', fontSize: '0.85rem', mb: 1.5 }}>
+                      {exp.company}
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: 'text.secondary', lineHeight: 1.75 }}>
+                      {exp.description}
+                    </Typography>
+                  </CardContent>
+                </Card>
+              ))}
+            </Stack>
           </Container>
         </Box>
 
@@ -961,7 +932,7 @@ export const Portfolio: React.FC = () => {
                   <Stack direction="row" spacing={0.75} flexWrap="wrap" sx={{ mb: 2.5, gap: '6px' }}>
                     {['Mobile Development', 'Web Development'].map((cert) => (
                       <Chip key={cert} label={cert} size="small" variant="outlined"
-                        sx={{ borderColor: 'rgba(16,185,129,0.3)', color: '#34d399', background: 'rgba(16,185,129,0.06)', fontSize: '0.68rem' }}
+                        sx={{ borderColor: 'rgba(14,165,233,0.3)', color: '#38bdf8', background: 'rgba(14,165,233,0.06)', fontSize: '0.68rem' }}
                       />
                     ))}
                   </Stack>
