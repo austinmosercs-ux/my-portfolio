@@ -219,7 +219,7 @@ export const Portfolio: React.FC = () => {
       id: 'project-3',
       title: 'Animated Book',
       description:
-        'A front-end project featuring an animated cover of "One Fish Two Fish Red Fish Blue Fish" by Dr. Seuss. Built purely with HTML and CSS using keyframe animations and transform properties to bring the book cover to life in the browser.',
+        'A project from Interactive Design II (ART 477) featuring an animated cover of "One Fish Two Fish Red Fish Blue Fish" by Dr. Seuss. Built purely with HTML and CSS using keyframe animations and transform properties to bring the book cover to life in the browser.',
       technologies: ['HTML', 'CSS', 'Animation'],
       github: 'https://github.com/austinmosercs-ux/AnimatedBookProject',
     },
