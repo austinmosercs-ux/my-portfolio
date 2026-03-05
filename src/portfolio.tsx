@@ -74,7 +74,7 @@ const theme = createTheme({
       fontFamily: '"Syne", sans-serif',
       fontSize: 'clamp(3rem, 7vw, 5.5rem)',
       fontWeight: 800,
-      lineHeight: 1.0,
+      lineHeight: 1,
       letterSpacing: '-0.04em',
     },
     h2: {
